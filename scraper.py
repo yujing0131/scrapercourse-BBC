@@ -33,7 +33,7 @@ for url in urls:
 #print(tag_list)
 ##讀取不同分頁下的內容
 for page in range(1,4):
-    response = requests.get(f"https://www.bbc.com/zhongwen/trad/topics/cq8nqywy37yt?page={page}")
+    response = requests.get(f"https://www.bbc.com/zhongwen/trad/topics/c83plve5vmjt?page={page}")
 
     soup = BeautifulSoup(response.text,'lxml')
 
