@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 start_time = time.time()
 
-links = [f"https://www.bbc.com/zhongwen/trad/topics/c83plve5vmjt/page/{page}" for page in range(1,4)]
+links = [f"https://www.bbc.com/zhongwen/trad/topics/cq8nqywy37yt/page/{page}" for page in range(1,4)]
 print(links)
 #建立GREQUEST 的處理池平行發送請求
 reqs = (grequests.get(link) for link in links)

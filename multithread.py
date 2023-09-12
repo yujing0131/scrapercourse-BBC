@@ -34,11 +34,12 @@ def scrape(links):
 
 start_time = time.time()
 ##必須建立網址清單
-links = [f'https://www.bbc.com/zhongwen/trad/topics/c83plve5vmjt?page={page}' for page in range(1,4)]
+links = ['https://www.bbc.com/zhongwen/trad/topics/c83plve5vmjt?page={page}' for page in range(1,4)]
 print(links)
+scrape(links[0])
 #同時建立和啟用多個執行緒。設定有10個執行緒
-with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-    executor.map(scrape,links)
+# with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+#     executor.map(scrape,links)
 
 end_time = time.time()
 print(f"花費{end_time-start_time}秒")
